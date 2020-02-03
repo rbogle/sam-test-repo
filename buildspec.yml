@@ -1,0 +1,16 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm version
+      - mkdir -p build
+      - npm install -g serverless
+  build:
+    commands:
+      - serverless -v 
+
+artifacts:
+  files:
+    - build*/**
+  discard-paths: yes
