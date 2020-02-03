@@ -8,7 +8,7 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless -v 
+      - serverless -v >> build/serverless.out
 
 artifacts:
   files:
