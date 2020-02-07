@@ -25,6 +25,7 @@ phases:
         commands:
             - 'echo "--------POST-BUILD PHASE--------"'
             - 'echo "SAM packaging completed on `date`"'
+            - 'echo ${CODEBUILD_INITIATOR##*/}'
 artifacts:
     files: 
         - 'build/packaged.yaml'
